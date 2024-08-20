@@ -1,15 +1,25 @@
-const express = require("express");
+// const express = require("express");
+// const app = express();
+
+// app.set("view engine", "ejs");
+
+// // Rota principal
+// app.get("/", (req, res) => {
+//   res.render("api/index", { title: "Hello, Vercel!" });
+// });
+
+// // Inicia o servidor na porta 3000
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//   console.log(`Servidor rodando na porta ${PORT}`);
+// });
+
+import express from "express";
+
 const app = express();
 
-app.set("view engine", "ejs");
+app.get("/", (req, res) => res.send("Express on Vercel"));
 
-// Rota principal
-app.get("/", (req, res) => {
-  res.render("api/index", { title: "Hello, Vercel!" });
-});
+app.listen(3000, () => console.log("Server ready on port 3000."));
 
-// Inicia o servidor na porta 3000
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
+export default app;
